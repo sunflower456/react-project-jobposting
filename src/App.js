@@ -5,6 +5,7 @@ import SignUp from './features/counter/SignUp';
 import PostingMain from './features/counter/PostingMain';
 import PostingList from './features/counter/PostingList';
 import PostingDetail from './features/counter/PostingDetail';
+import ApplicationMain from './features/counter/ApplicationMain';
 import './App.css';
 
 class App extends Component {
@@ -20,6 +21,7 @@ class App extends Component {
           <Route path='/main' component={PostingMain} />
           <Route path='/posts' exact component={PostingList} />
           <Route path='/posts/:id' exact component={PostingDetail} />
+          <Route path='/appl' exact component={ApplicationMain} />
         </Router>
       </div>
     )

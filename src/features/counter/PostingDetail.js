@@ -1,6 +1,7 @@
 import react, {Component} from 'react';
-import {Container,Divider,Icon,Grid,Header,List,Table,Segment, Visibility, Menu, Button} from 'semantic-ui-react';
+import {Container,Icon,Header,Table,Button} from 'semantic-ui-react';
 import MenuBar from './MenuBar';
+import Footer from './Footer';
 export default class PostingDetail extends Component {
     constructor(props){
         super(props);
@@ -51,53 +52,19 @@ export default class PostingDetail extends Component {
             </Container>
             <Container text style={{ marginTop: '7em' }}>
                 <p><div dangerouslySetInnerHTML={ {__html: codes} }></div></p>
+                <br/><br/>
+                <Button primary floated='right' onClick={function(){
+                    this.props.history.push({
+                        pathname : '/appl',
+                        state : {
+                            uri : this.state.uri,
+                            title : this.state.posts.title
+                        }
+                    });
+                }.bind(this)}>지원하기</Button>
             </Container>
-            <Segment inverted vertical style={{ margin: '5em 0em 0em', padding: '5em 0em' }}>
-            <Container textAlign='center'>
-                <Grid divided inverted stackable>
-                <Grid.Column width={3}>
-                    <Header inverted as='h4' content='Group 1' />
-                    <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    </List>
-                </Grid.Column>
-                <Grid.Column width={3}>
-                    <Header inverted as='h4' content='Group 2' />
-                    <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    </List>
-                </Grid.Column>
-                <Grid.Column width={3}>
-                    <Header inverted as='h4' content='Group 3' />
-                    <List link inverted>
-                    <List.Item as='a'>Link One</List.Item>
-                    </List>
-                </Grid.Column>
-                <Grid.Column width={7}>
-                    <Header inverted as='h4' content='Footer Header' />
-                    <p>
-                    Extra space for a call to action inside the footer that could help re-engage users.
-                    </p>
-                </Grid.Column>
-                </Grid>
-
-                <Divider inverted section />
-                <List horizontal inverted divided link size='small'>
-                <List.Item as='a' href='#'>
-                    Site Map
-                </List.Item>
-                <List.Item as='a' href='#'>
-                    Contact Us
-                </List.Item>
-                <List.Item as='a' href='#'>
-                    Terms and Conditions
-                </List.Item>
-                <List.Item as='a' href='#'>
-                    Privacy Policy
-                </List.Item>
-                </List>
-            </Container>
-            </Segment>
+            
+            <Footer />
             </div>
         )
     }
