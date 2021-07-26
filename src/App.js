@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import { BrowserRouter as  Router, Route  } from 'react-router-dom';
-import Login from './features/counter/Login';
-import SignUp from './features/counter/SignUp';
-import PostingMain from './features/counter/PostingMain';
-import PostingList from './features/counter/PostingList';
-import PostingDetail from './features/counter/PostingDetail';
-import ApplicationMain from './features/counter/ApplicationMain';
+import Login from './features/Login';
+import SignUp from './features/SignUp';
+import PostingMain from './features/PostingMain';
+import PostingList from './features/PostingList';
+import PostingDetail from './features/PostingDetail';
+import ApplicationMain from './features/ApplicationMain';
 import './App.css';
 
 class App extends Component {

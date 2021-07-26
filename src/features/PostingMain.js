@@ -1,6 +1,6 @@
 import react, {Component} from 'react';
 import {  Button, Container,Grid,Header,Image,Segment, Card} from "semantic-ui-react";
-import '../../App.css';
+import '../App.css';
 import Slider from "react-slick";
 import MenuBar from './MenuBar';
 export default class PostingMain extends Component{

@@ -1,0 +1,17 @@
+version: '3'
+services:
+  frontend:
+    image: sunflower/jobposting-frontend:latest
+    environment:
+      PORT: 8000
+      GUESTBOOK_API_ADDR: backend:8000
+    ports:
+      - "8888:8000"
+  backend:
+    image: sunflower/jobposting-backend:latest
+    environment:
+      PORT: 8000
+      GUESTBOOK_DB_ADDR: h2db:27017
+    restart: always
+  h2db:
+    image: buildo/h2database

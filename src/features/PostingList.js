@@ -1,6 +1,6 @@
 import react, {Component} from 'react';
 import {Button,Container,Divider,Form,Grid,Header,Icon,Menu, Message, Item, Table} from "semantic-ui-react";
-import '../../App.css';
+import '../App.css';
 import MenuBar from './MenuBar';
 export default class PostingList extends Component {
     constructor(props){
